@@ -31,8 +31,8 @@
             return{
                 navbarItems:[
                     {id:1,navbarName:'Home',path:'/'},
-                    {id:2,navbarName:'About Us',path:'/about-us'},
-                    {id:3,navbarName:'See Profile',path:'/see-profile'},
+                    {id:2,navbarName:'About Us',path:'/aboutus'},
+                    {id:3,navbarName:'register',path:'/register'},
                     {id:4,navbarName:'Courses',path:'/courses',
                     nameofCourse:[
                        {id:4-1,courseName:'Software',path:'/software'} ,

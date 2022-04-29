@@ -1,17 +1,35 @@
 <template>
   <div id="nav">
+    <h1 class="display text-white bg-dark p-3">Welcome to your page</h1>
     <main-navbar />
+    <div class="row">
+      <div class="col-md-3">
+        <left-side />
+      </div>
+
+      <div class="col-md-9">
+         <router-view v-slot="{Component , route}">
+            <transition :name="route.meta.transitionName">
+                <component :is=" Component"/>
+            </transition>
+        </router-view>
+      </div>
+    </div>
+    
   </div>
-  <router-view/>
+
+  
 </template>
 
 <script>
 
   import MainNavbar from '@/components/MainNavbar.vue'
+  import LeftSide from '@/components/LeftSide.vue'
 
 export default{
     components:{
-      MainNavbar
+      MainNavbar,
+      LeftSide
     }
   }
 
@@ -19,6 +37,9 @@ export default{
 </script>
 
 <style lang="scss">
+*{
+  scroll-behavior: smooth;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -38,5 +59,43 @@ export default{
       color: #42b983;
     }
   }
+}
+
+.fadein-enter-active,
+.fadein-leave-active {
+  transition:  0.5s ease;
+  
+}
+
+.fadein-enter-from,
+.fadein-leave-to {
+  opacity: 0;
+  transform: skew(15deg);
+}
+
+
+.home-enter-active,
+.home-leave-active {
+  transition:  0.5s ease;
+  
+}
+
+.home-enter-from,
+.home-leave-to {
+  opacity: 0;
+
+}
+
+.about-fade-enter-active,
+.about-fade-leave-active {
+  transition:  0.5s ease;
+  
+}
+
+.about-fade-enter-from,
+.about-fade-leave-to {
+  opacity: 0;
+  transform: translateX(50px);
+  scroll-behavior: smooth;
 }
 </style>
