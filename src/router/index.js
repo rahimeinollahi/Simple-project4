@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+const Software=()=>import(/*webpackName:'software'*/'@/views/Software.vue')
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/software',
+    name: 'software',
+    component: Software
   },
   {
     path: '/about',
