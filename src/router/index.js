@@ -29,13 +29,19 @@ const routes = [
     meta:{transitionName:"fadein"}
   },
   {
+    path: '/register',
+    name: 'register',
+    component: ()=>import(/*webpackName:register*/'@/views/RegisterInfo.vue'),
+    meta:{transitionName:"fadein"}
+  },
+  {
     path: '/aboutus',
     name: 'Aboutus',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "aboutus" */ '../views/AboutUs.vue'),
-    meta:{transitionName:"about-fade"}
+    meta:{transitionName:"ts-register"}
   }
 ]
 

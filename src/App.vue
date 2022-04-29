@@ -98,4 +98,17 @@ export default{
   transform: translateX(50px);
   scroll-behavior: smooth;
 }
+
+.ts-register-enter-active,
+.ts-register-leave-active {
+  transition:all  0.5s ease;
+  
+}
+
+.ts-register-enter-from,
+.ts-register-leave-to {
+  opacity: 0;
+  background-color: #42b983;
+
+}
 </style>
