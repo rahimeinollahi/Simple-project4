@@ -41,6 +41,12 @@ const routes = [
     meta:{transitionName:"ts-hardware"}
   },
   {
+    path: '/automata',
+    name: 'automata',
+    component: ()=>import(/*webpackName:register*/'@/views/Automata.vue'),
+    meta:{transitionName:"ts-automata"}
+  },
+  {
     path: '/aboutus',
     name: 'Aboutus',
     // route level code-splitting

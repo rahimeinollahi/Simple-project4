@@ -111,4 +111,16 @@ export default{
   background-color: #42b983;
 
 }
+.ts-automata-enter-active,
+.ts-automatar-leave-active {
+  transition:all  0.5s ease;
+  
+}
+
+.ts-automata-enter-from,
+.ts-automata-leave-to {
+  opacity: 0;
+  transform: scale(2);
+
+}
 </style>
