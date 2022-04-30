@@ -35,6 +35,12 @@ const routes = [
     meta:{transitionName:"fadein"}
   },
   {
+    path: '/hardware',
+    name: 'hardware',
+    component: ()=>import(/*webpackName:register*/'@/views/Hardware.vue'),
+    meta:{transitionName:"ts-hardware"}
+  },
+  {
     path: '/aboutus',
     name: 'Aboutus',
     // route level code-splitting
